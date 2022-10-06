@@ -1,10 +1,8 @@
-# flask-yottadb-demo
+# YottaDBvsMysql
 
-A simple demo of the Python Flask framework using yottadb as a backend
+Testing YottaDB against Mysql in a Python Flask framework using Postman/newman
 
-Creates a simple api for adding users to a YottaDB database
-
-![Alt text](flask.JPG?raw=true "view")
+This repo utilises a separate repo for <a href="https://github.com/RamSailopal/flask-mysql-demo">Flasks/mysql</a> and <a href="https://github.com/RamSailopal/flask-yottadb-demo">Flask/YottaDB</a> 
 
 # Provisioning
 
@@ -13,40 +11,18 @@ Creates a simple api for adding users to a YottaDB database
 
 Locally:
 
-    git clone https://github.com/RamSailopal/flask-yottadb-demo.git
-    cd flask-yottadb-demo
+    git clone https://github.com/RamSailopal/YottaDBvsMysql.git
+    cd YottaDBvsMysql
     docker-compose up
     
-# Backend
-    
-    
-On completion of the provisioning of the environment, navigate to http://serveraddress:5000/user to GET and POST data
+# Testing
 
-# YottaDB view
+The results of the tests can be found here:
 
-    ^PATIENTS(1,"age")=52
-    ^PATIENTS(1,"name")="Bob Taylor"
-    ^PATIENTS(1,"sex")="Male"
+YottaDB - https://htmlpreview.github.io/?https://github.com/RamSailopal/YottaDBvsMysql/blob/main/YottaDB-report.html
 
+Mysql - https://htmlpreview.github.io/?https://github.com/RamSailopal/YottaDBvsMysql/blob/main/Mysql-report.html
 
-# Front-end
-
-A crude front-end to demonstate the use of Jinja templates has been added.
-
-To view the front-end, navigate to:
-
-http://serveraddress:5001 - Locally
-
-https://5001-gitpodaddress - Gitpod
-
-
-# Mysql comparison
-
-This implementation has also be done with mysql as opposed to YottaDB for comparison purposes.
-
-The mysql implementation can be found here:
-
-https://github.com/RamSailopal/flask-mysql-demo
 
 
 
