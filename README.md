@@ -15,6 +15,8 @@ Locally:
     cd YottaDBvsMysql
     docker-compose up
     
+Once provisioning is fully completed, two newman html reports will be generated with API GET/POST request results (see below for more info).
+    
 # Testing
 
 The results of the tests can be found here:
@@ -25,7 +27,7 @@ Mysql - https://htmlpreview.github.io/?https://github.com/RamSailopal/YottaDBvsM
 
 A complete (side by side) report - https://htmlpreview.github.io/?https://github.com/RamSailopal/YottaDBvsMysql/blob/main/newman/Complete-report.html
 
-In **summary**, YottaDB **GET** requests are a lot quicker than Mysql taking **6ms** against **36ms** for Mysql. Mysql is quicker with regards to **PUT** requests though, registering **313ms** against **448ms** for YottaDB
+In **summary**, YottaDB **GET** requests are a lot quicker than Mysql taking **6ms** against **36ms** for Mysql. Mysql is quicker with regards to **POST** requests though, registering **313ms** against **448ms** for YottaDB
 
 
 
