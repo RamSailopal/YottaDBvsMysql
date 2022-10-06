@@ -2,7 +2,7 @@
 
 Testing YottaDB against Mysql in a Python Flask framework using Postman/newman
 
-This repo utilises a separate repo for <a href="https://github.com/RamSailopal/flask-mysql-demo">Flasks/mysql</a> and <a href="https://github.com/RamSailopal/flask-yottadb-demo">Flask/YottaDB</a> 
+This repo utilises separate repos for <a href="https://github.com/RamSailopal/flask-mysql-demo">Flasks/mysql</a> and <a href="https://github.com/RamSailopal/flask-yottadb-demo">Flask/YottaDB</a> 
 
 # Provisioning
 
