@@ -19,9 +19,9 @@ Locally:
 
 The results of the tests can be found here:
 
-YottaDB - https://htmlpreview.github.io/?https://github.com/RamSailopal/YottaDBvsMysql/newman/blob/main/YottaDB-report.html
+YottaDB - https://htmlpreview.github.io/?https://github.com/RamSailopal/YottaDBvsMysql/blob/main/newman/YottaDB-report.html
 
-Mysql - https://htmlpreview.github.io/?https://github.com/RamSailopal/YottaDBvsMysql/newman/blob/main/Mysql-report.html
+Mysql - https://htmlpreview.github.io/?https://github.com/RamSailopal/YottaDBvsMysql/blob/main/newman/Mysql-report.html
 
 
 
