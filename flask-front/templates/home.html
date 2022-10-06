@@ -1,0 +1,77 @@
+<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<head>
+<meta content="en-gb" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Flask Demo</title>
+<style type="text/css" media="screen">
+
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+input[type=button] {
+    width: 10%;
+    background-color: #606358;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+input[type=button]:hover {
+    background-color: #45a049;
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+div {
+	width:1500px;
+    border-radius: 0px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    font: 0.7em segoe ui, helvetica, verdana, arial;
+    font-size: 12px;
+    margin-left: 10px;
+	cursor: pointer;
+	overflow: scroll;
+   
+}
+</style>
+
+<style type="text/css" media="print">
+	
+</style>
+
+</head>
+<body>
+<div style="background-color:#2E86C1;overflow: hidden;">
+<h3 style="font: 1.2em segoe ui, helvetica, verdana, arial;margin-left: 10px;
+"><label id="Label1"><strong><span class="auto-style1">Users Flask Demo</span></strong></h3>
+</div>
+<div>
+<table>
+<tr><th>ID</th><th>Name</th><th>Age</th><th>Sex</th></tr>
+{% block content %}
+	{% for user in users %}
+	<tr onClick='location.href="/user?id={{ user.id }}"'><td>{{ user.id }}</td><td>{{ user.name }}</td><td>{{ user.age }}</td><td>{{ user.sex }}</td></tr>
+        {% endfor %}
+{% endblock %}
+</table>
+</div>
+<table>
+<tr><td><input style="width:100%;" type="button" value="Refresh" onClick='location.href="/";'/></td><td><input style="width:100%;" type="button" value="Add User" onClick='location.href="/newuser";'/></td></td></tr>
+</table>
+
+</body>
+</html>

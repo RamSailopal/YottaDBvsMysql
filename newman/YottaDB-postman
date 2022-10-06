@@ -1,0 +1,57 @@
+{
+	"info": {
+		"_postman_id": "21239fec-6b7c-4146-b0c2-d63e50c1928a",
+		"name": "YottaDB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Yotta Put",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"name\": \"Ram Sailopal\", \"sex\": \"M\", \"age\": \"21\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "flask_flask-back-yotta:5000/adduser",
+					"host": [
+						"flask_flask-back-yotta"
+					],
+					"port": "5000",
+					"path": [
+						"adduser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Yotta Get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "flask_flask-back-yotta:5000/users",
+					"host": [
+						"flask_flask-back-yotta"
+					],
+					"port": "5000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

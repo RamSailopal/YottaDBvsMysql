@@ -1,0 +1,6 @@
+FROM ubuntu:focal
+RUN apt-get update && apt-get install -y python3 python3-pip curl && pip3 install flask requests
+COPY index.py /home/flask/index.py
+COPY templates /home/flask/templates
+WORKDIR /home/flask
+ENTRYPOINT export FLASK_APP=index && export FLASK_ENV=development && flask run --host=0.0.0.0

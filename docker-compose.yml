@@ -1,0 +1,80 @@
+version: "2"
+services:
+  flask-back-yotta:
+    image: docker.io/ramb0/ydb-python
+    container_name: "flask_flask-back-yotta"
+    networks:
+      - flask
+    volumes:
+      - "$PWD/flask-back:/home/flask-back"
+    ports:
+      - 5000:5000
+    entrypoint:
+      - "/home/flask-back/entrypoint.sh"
+
+  flask-front-yotta:
+    image: ubuntu:focal
+    container_name: "flask_flask-front-yotta"
+    networks:
+      - flask
+    volumes:
+      - "$PWD/flask-front:/home/flask-front"
+    ports:
+      - 5001:5000
+    entrypoint:
+      - "/home/flask-front/entrypoint.sh"
+
+  testmysql:
+    image: mysql:8
+    container_name: "flask_testmysql"
+    networks:
+      - flask
+    volumes:
+      - "$PWD/mysql:/home/mysql"
+    environment:
+      MYSQL_ROOT_PASSWORD: ${flaskpass}
+
+  flask-back-mysql:
+    image: ubuntu:focal
+    container_name: "flask_flask-back-mysql"
+    networks:
+      - flask
+    volumes:
+      - "$PWD/mysql-flask-back:/home/flask-back"
+    ports:
+      - 5002:5000
+    environment:
+       FLASKPASS: ${flaskpass}
+       FLASKDAT: ${flaskdatabase}
+       FLASKUSER: ${flaskuser}
+       MYSQLHOST: ${mysqlhost}
+    entrypoint:
+      - "/home/flask-back/entrypoint.sh"
+
+  flask-front-mysql:
+    image: ubuntu:focal
+    container_name: "flask_flask-front-mysql"
+    networks:
+      - flask
+    volumes:
+      - "$PWD/mysql-flask-front:/home/flask-front"
+    ports:
+      - 5003:5000
+    entrypoint:
+      - "/home/flask-front/entrypoint.sh"
+
+  newman:
+    image: ubuntu:focal
+    container_name: "newman"
+    networks:
+      - flask
+    volumes:
+      - "$PWD/newman:/home/node"
+    entrypoint:
+      - "/home/node/entrypoint.sh"
+
+
+
+networks:
+    flask:
+
