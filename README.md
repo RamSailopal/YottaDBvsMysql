@@ -7,7 +7,7 @@ This repo utilises separate repos for <a href="https://github.com/RamSailopal/fl
 # Provisioning
 
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/RamSailopal/flask-yottadb-demo)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/RamSailopal/YottaDBvsMysql)
 
 Locally:
 
