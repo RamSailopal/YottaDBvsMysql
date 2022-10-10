@@ -1,21 +1,18 @@
 {
 	"info": {
-		"_postman_id": "aad3cd24-19b0-40f8-9b12-b1b6ae7812a6",
-		"name": "Mysql",
+		"_postman_id": "86ddcb39-fa9b-4ebb-8c02-1d490a004e57",
+		"name": "yotta-flask-mysql",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "Mysql Put",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
+			"name": "Add new user",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{ \"name\": \"Ram Sailopal\", \"sex\": \"M\", \"age\": \"21\"}",
+					"raw": "{ \"name\": \"Ram Sailopal\", \"sex\": \"M\", \"age\": \"22\"}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -36,7 +33,7 @@
 			"response": []
 		},
 		{
-			"name": "Mysql Get",
+			"name": "Get users",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -48,6 +45,52 @@
 					"port": "5000",
 					"path": [
 						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Amend user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"id\": 1, \"name\": \"Ram Sailopal\", \"sex\": \"M\", \"age\": \"22\" }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "flask_flask-back-mysql:5002/user",
+					"host": [
+						"flask_flask-back-mysql"
+					],
+					"port": "5000",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "flask_flask-back-mysql:5002/user/1",
+					"host": [
+						"flask_flask-back-mysql"
+					],
+					"port": "5000",
+					"path": [
+						"user",
+						"1"
 					]
 				}
 			},
